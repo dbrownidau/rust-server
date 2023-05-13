@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  rust:
+    image: steamcmd/steamcmd
+    ports:
+      - '28015:28015'
+      - '28015:28015/udp'
+      - '28016:28016'
+    volumes:
+      - ./rust_data:/rust
+      - ./run.txt:/run.txt
+      - ./start.sh:/start.sh
+    entrypoint: /bin/sh
+    command: /start.sh
+    restart: unless-stopped
+

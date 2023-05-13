@@ -1,0 +1,5 @@
+force_install_dir /rust
+login anonymous
+app_info_update 1
+app_update 258550 validate
+quit
