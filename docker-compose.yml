@@ -11,6 +11,7 @@ services:
       - ./rust_data:/rust
       - ./run.txt:/run.txt
       - ./start.sh:/start.sh
+    working_dir: /rust
     entrypoint: /bin/sh
     command: /start.sh
     restart: unless-stopped
